@@ -1,9 +1,9 @@
 import React from 'react';
 import App, { Container } from 'next/app';
-import { ThemeProvider, injectGlobal } from 'styled-components';
+import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import theme from '../config';
 
-injectGlobal`
+createGlobalStyle`
   html {
     font-size: 10px;
     box-sizing: border-box;
