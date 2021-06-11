@@ -1,19 +1,9 @@
-import React from 'react'
-import Head from 'next/head'
-import styled from 'styled-components';
+import styles from '../styles/Home.module.css'
 
-const Title = styled.h1`
-  font-size: 3rem;
-  color: ${props => props.theme.primary};
-`;
-
-const Index = () => (
-  <>
-    <Head>
-      <title>Hello World</title>
-    </Head>
-    <Title>Hello World</Title>
-  </>
-);
-
-export default Index;
+export default function Home() {
+  return (
+    <div className={styles.container}>
+      <h1>Hello Next World!</h1>
+    </div>
+  )
+}
