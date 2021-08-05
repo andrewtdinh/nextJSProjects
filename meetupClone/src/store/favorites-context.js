@@ -9,7 +9,9 @@ function FavoritesContextProvider(props) {
   const [ userFavorites, setUserFavorites ] = useState([]);
 
   function addFavoriteHandler(favoriteMeetup) {
-    setUserFavorites(userFavorites.concat(favoriteMeetup))
+    setUserFavorites((previousUserFavorites) => {
+      return previousUserFavorites.concat(favoriteMeetup);
+    })
   }
 
   function removeFavoriteHandler() {
