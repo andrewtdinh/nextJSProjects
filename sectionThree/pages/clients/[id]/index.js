@@ -5,7 +5,11 @@ function ClientProjectsPage() {
 
   function loadProjectHandler() {
     // load data ...
-    router.push(`/clients/${router.query.id}/projecta`);
+    // router.push(`/clients/${router.query.id}/projecta`);
+    router.push({
+      pathname: '[id]/[clientprojectid]',
+      query: {id: router.query.id, clientprojectid: 'projecta'}
+    })
   }
 
   return (
