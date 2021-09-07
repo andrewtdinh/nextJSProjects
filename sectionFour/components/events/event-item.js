@@ -1,14 +1,26 @@
+import Link from 'next/link';
+
 function EventItem(props) {
+  const { title, image, date, location, id } = props;
+
+  const humanReadableDate = new Date(date).toLocaleDateString('en-US', {
+    day: "numeric",
+    month: "long",
+    year: "numeric"
+  });
+  const formattedAddress = location.replace(', ', '\n');
+
+
   return <li>
-    <img src="" alt="" />
+    <img src={"/" + image} alt={title} />
     <div>
       <div>
-        <h2>TITLE</h2>
+        <h2>{title}</h2>
         <div>
-          <time>DATE</time>
+          <time>{humanReadableDate}</time>
         </div>
         <div>
-          <address>ADDRESS</address>
+          <address>{formattedAddress}</address>
         </div>
       </div>
       <div>
