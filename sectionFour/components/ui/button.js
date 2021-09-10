@@ -1,9 +1,9 @@
 import Link from 'next/link';
 
 function Button(props) {
-  return <Link>
+  return <Link href={props.link}>
     {props.children}
-  </Link>
+  </Link>;
 };
 
 export default Button;
